@@ -1,7 +1,9 @@
+require("dotenv").config();
+
 var bode = require("./"),
     server;
 
-server = bode({});
+server = bode(process.env);
 
 server.listen(process.env.port || server.port, function() {
     var address = server.address();
