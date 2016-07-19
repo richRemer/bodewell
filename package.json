@@ -3,9 +3,6 @@
   "version": "0.0.1",
   "description": "Monitor the local system and send email alerts",
   "main": "index.js",
-  "scripts": {
-    "test": "mocha"
-  },
   "author": "Richard Remer (reanjr@gmail.com)",
   "license": "MIT"
 }
