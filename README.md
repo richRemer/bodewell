@@ -1,6 +1,6 @@
 Configuration
 =============
-Configuration is read from `/etc/bode/config` and from `$PWD/.env`.
+Configuration is read from `/etc/bodewell/config` and from `$PWD/.env`.
 
 ```
 host=domain.com
@@ -10,5 +10,5 @@ group=root
 cert=/path/to/cert
 key=/path/to/key
 cat=/path/to/ca
-include=/include/**/pattern.*
+include=/etc/bodewell/**/*.conf
 ```

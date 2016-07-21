@@ -1,13 +1,13 @@
 var expand = require("expand-hash"),
     loadenv = require("./lib/load-env"),
     loadcerts = require("./lib/load-certs"),
-    bode = require("./");
+    bodewell = require("./");
 
 loadenv().then(loadenv).then(loadcerts).then(function(config) {
     var server,
         port, host;
 
-    server = bode.createServer(new bode.BodeApp(config));
+    server = bodewell.createServer(new bodewell.BodewellApp(config));
     port = process.env.port || server.default_port;
     host = process.env.host || "127.0.0.1";
 
