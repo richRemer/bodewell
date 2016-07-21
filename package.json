@@ -3,9 +3,16 @@
   "version": "0.0.1",
   "description": "Monitor the local system and send email alerts",
   "main": "index.js",
+  "bin": {
+    "bode": "./bin/bode-cli"
+  },
   "author": "Richard Remer (reanjr@gmail.com)",
   "license": "MIT",
   "dependencies": {
-    "dotenv": "^2.0.0"
+    "bytesized": "^1.0.0",
+    "diskusage": "^0.1.5",
+    "dotenv": "^2.0.0",
+    "expand-hash": "^0.2.2",
+    "glob": "^7.0.5"
   }
 }
