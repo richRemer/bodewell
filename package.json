@@ -14,6 +14,7 @@
     "dotenv": "^2.0.0",
     "expand-hash": "^0.2.2",
     "free-memory": "^1.0.0",
-    "glob": "^7.0.5"
+    "glob": "^7.0.5",
+    "sendmail": "^0.2.2"
   }
 }
