@@ -1,13 +1,18 @@
 var expand = require("expand-hash"),
     loadenv = require("./lib/load-env"),
     loadcerts = require("./lib/load-certs"),
-    bodewell = require("./");
+    bodewell = require("./"),
+    monitorType = require("./lib/monitor/monitor-type");
+
+monitorType("disk", require("./lib/monitor/disk"));
+monitorType("load", require("./lib/monitor/load"));
+monitorType("mem", require("./lib/monitor/mem"));
 
 loadenv().then(loadenv).then(loadcerts).then(function(config) {
     var server,
         port, host;
 
-    server = bodewell.createServer(new bodewell.BodewellApp(config));
+    server = bodewell.createServer(new bodewell.BodewellApp(expand(config)));
     port = process.env.port || server.default_port;
     host = process.env.host || "127.0.0.1";
 
