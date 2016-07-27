@@ -5,8 +5,8 @@
 # Required-Stop:     $remote_fs $syslog
 # Default-Start:     2 3 4 5
 # Default-Stop:      0 1 6
-# Short-Description: ...
-# Description:       ...
+# Short-Description: Bodewell System Monitor
+# Description:       Bodewell System Monitor
 ### END INIT INFO
 
 name=`basename `\readlink -f $0\``
