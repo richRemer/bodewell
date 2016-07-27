@@ -1,6 +1,6 @@
 {
   "name": "bodewell",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Monitor the local system and send email alerts",
   "main": "index.js",
   "bin": {
