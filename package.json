@@ -1,6 +1,6 @@
 {
   "name": "bodewell",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Monitor the local system and send email alerts",
   "main": "index.js",
   "bin": {
@@ -10,11 +10,9 @@
   "license": "MIT",
   "dependencies": {
     "bytesized": "^1.0.0",
-    "diskusage": "^0.1.5",
-    "dotenv": "^2.0.0",
     "expand-hash": "^0.2.2",
+    "figger": "^1.1.2",
     "free-memory": "^1.0.0",
-    "glob": "^7.0.5",
     "nodejs-disks": "^0.2.1"
   }
 }
