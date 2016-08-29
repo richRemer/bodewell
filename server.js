@@ -2,20 +2,25 @@ var figger = require("figger"),
     expand = require("expand-hash"),
     loadcerts = require("./lib/load-certs"),
     bodewell = require("./"),
+    server = new bodewell.Server(),
     monitorType = require("./lib/monitor/monitor-type");
 
 monitorType("disk", require("./lib/monitor/disk"));
 monitorType("load", require("./lib/monitor/load"));
 monitorType("mem", require("./lib/monitor/mem"));
 
-figger("/etc/bodewell/config").then(loadcerts).then(function(config) {
-    var server,
+function loadConfig() {
+    return figger("/etc/bodewell/config").then(loadcerts).then(expand);
+}
+
+Promise.all([loadConfig(), server.discoverPlugins()]).then(results => {
+    var config = results[0],
         webServer,
         port, host;
 
-    server = new bodewell.Server();
-    server.configure(expand(config));
+    server.configure(config);
     webServer = bodewell.createServer(server);
+
     port = config.port || webServer.default_port;
     host = config.host || "127.0.0.1";
 
