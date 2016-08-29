@@ -10,14 +10,17 @@ monitorType("mem", require("./lib/monitor/mem"));
 
 figger("/etc/bodewell/config").then(loadcerts).then(function(config) {
     var server,
+        webServer,
         port, host;
 
-    server = bodewell.createServer(new bodewell.Server(expand(config)));
-    port = config.port || server.default_port;
+    server = new bodewell.Server();
+    server.configure(expand(config));
+    webServer = bodewell.createServer(server);
+    port = config.port || webServer.default_port;
     host = config.host || "127.0.0.1";
 
-    server.listen(port, host, function() {
-        var address = server.address();
+    webServer.listen(port, host, function() {
+        var address = webServer.address();
 
         if (process.env.user) {
             console.log("dropping privileges");
