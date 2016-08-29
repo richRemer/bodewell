@@ -10,5 +10,5 @@ group=root
 cert=/path/to/cert
 key=/path/to/key
 cat=/path/to/ca
-include=/etc/bodewell/**/*.conf
+. /etc/bodewell/**/*.conf
 ```

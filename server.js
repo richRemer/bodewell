@@ -12,7 +12,7 @@ figger("/etc/bodewell/config").then(loadcerts).then(function(config) {
     var server,
         port, host;
 
-    server = bodewell.createServer(new bodewell.BodewellApp(expand(config)));
+    server = bodewell.createServer(new bodewell.Server(expand(config)));
     port = config.port || server.default_port;
     host = config.host || "127.0.0.1";
 
