@@ -10,7 +10,8 @@ monitorType("load", require("./lib/monitor/load"));
 monitorType("mem", require("./lib/monitor/mem"));
 
 function loadConfig() {
-    return figger("/etc/bodewell/config").then(loadcerts).then(expand);
+    var config = process.env.config || "/etc/bodewell/config";
+    return figger(config).then(loadcerts).then(expand);
 }
 
 Promise.all([loadConfig(), server.discoverPlugins()]).then(results => {
