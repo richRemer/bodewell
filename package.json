@@ -1,19 +1,12 @@
 {
   "name": "bodewell",
-  "version": "2.0.0",
-  "description": "Monitor the local system and send email alerts",
-  "main": "index.js",
-  "bin": {
-    "bodewell": "./bin/bodewell-cli.js"
-  },
+  "version": "3.0.0-alpha",
+  "description": "Monitor system and send alerts",
+  "main": "bodewell.js",
   "author": "Richard Remer (reanjr@gmail.com)",
   "license": "MIT",
   "dependencies": {
-    "bytesized": "^1.0.0",
-    "expand-hash": "^0.2.2",
-    "figger": "^1.1.2",
-    "free-memory": "^1.0.0",
-    "nodejs-disks": "^0.2.1",
-    "npmls": "^3.0.0"
+    "bodewell-resource": "0.0.1",
+    "bodewell-service": "0.0.1"
   }
 }

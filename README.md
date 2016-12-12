@@ -1,14 +1,13 @@
-Configuration
-=============
-Configuration is read from `/etc/bodewell/config` and from `$PWD/.env`.
+Bodewell System Monitor
+=======================
+Bodewell is a platform for building system monitoring.
 
-```
-host=domain.com
-port=1234
-user=root
-group=root
-cert=/path/to/cert
-key=/path/to/key
-cat=/path/to/ca
-. /etc/bodewell/**/*.conf
+ > The `bodewell` package used to include the command-line server script.
+ > This is no longer the case.  For the command-line, see the `bodewell-cli`
+ > package.
+
+```js
+const bodewell = require("bodewell");
+const Service = bodewell.Service;
+const Resource = bodewell.Resource;
 ```
