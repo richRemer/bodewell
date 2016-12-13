@@ -1,7 +1,7 @@
-const BodewellService = require("bodewell-service");
+const Service = require("bodewell-service");
 
 function bodewell(opts) {
-    return new BodewellService(opts);
+    return new Service(opts);
 }
 
 module.exports = bodewell;
