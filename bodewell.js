@@ -9,4 +9,4 @@ function bodewell(opts) {
 module.exports = bodewell;
 module.exports.Service = Service;
 module.exports.Resource = Resource;
-module.exports.Monitor = Minitor;
+module.exports.Monitor = Monitor;
