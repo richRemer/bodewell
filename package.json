@@ -6,7 +6,8 @@
   "author": "Richard Remer (reanjr@gmail.com)",
   "license": "MIT",
   "dependencies": {
+    "bodewell-monitor": "0.0.2",
     "bodewell-resource": "0.0.1",
-    "bodewell-service": "0.0.1"
+    "bodewell-service": "0.0.2"
   }
 }
